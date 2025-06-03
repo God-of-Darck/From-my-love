@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>From my Love</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    /* 1) Reset básico */
+    * {
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    /* 2) Estilo do body */
+    body {
+      background-color: #000 !important;
+      color: #fff !important;
+      font-family: 'Great Vibes', cursive !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      min-height: 100vh !important;
+      text-align: center !important;
+      padding: 20px !important;
+    }
+
+    /* 3) Container principal */
+    .container {
+      max-width: 900px !important;
+      width: 100% !important;
+      margin: 0 auto !important;
+    }
+
+    /* 4) Título da seção */
+    .titleSection {
+      font-size: 2.5rem !important;
+      color: #ff70a6 !important;
+      margin-bottom: 1.5rem !important;
+      text-shadow: 2px 2px 6px rgba(255, 112, 166, 0.6) !important; 
+    }
+
+    /* 5) Iframe do Spotify */
+    .Musicasportfy {
+      display: block !important;
+      margin: 0 auto 2rem !important;
+      width: 100% !important;
+      max-width: 400px !important;
+      height: 100px !important;
+      border-radius: 12px !important;
+      border: none !important;
+    }
+
+    /* 6) Carrossel */
+    .carousel {
+      width: 100% !important;
+      max-width: 400px !important;
+      margin: 0 auto 2rem !important;
+      border: 10px solid #ca215a !important;
+      border-radius: 16px !important;
+      overflow: hidden !important;
+    }
+
+    .carousel img {
+      width: 100% !important;
+      height: auto !important;
+      display: block !important;
+      border-radius: 10px !important;
+    }
+
+    /* 7) Bloco do contador */
+    .loveandtime {
+      background-color: #d1319c !important;
+      margin: 2rem auto !important;
+      padding: 1rem !important;
+      border-radius: 16px !important;
+      max-width: 400px !important;
+      font-size: 1.1rem !important;
+      color: #fff !important;
+      font-family: 'Times New Roman', Times, serif !important;
+    }
+
+    .loveandtime h4 {
+      margin-bottom: 0.5rem !important;
+    }
+
+    /* 8) Mensagem deslizante */
+    .msgmover {
+      font-size: 1.5rem !important;
+      color: #ff70a6 !important;
+      margin: 2rem auto !important;
+    }
+
+    /* 9) Bloco de texto romântico */
+    .msgromantica {
+      margin: 3rem auto !important;
+    }
+
+    .msgtexte {
+      background-color: #1a1a1a !important;
+      padding: 1.5rem !important;
+      border-radius: 20px !important;
+      box-shadow: 0 0 20px rgba(255, 112, 166, 0.3) !important;
+      text-align: left !important;
+      font-size: 1.2rem !important;
+      line-height: 1.6 !important;
+      max-width: 800px !important;
+      margin: 0 auto !important;
+    }
+
+    /* 10) Media Queries para responsividade */
+    @media (max-width: 768px) {
+      .titleSection {
+        font-size: 2rem !important;
+      }
+      .Musicasportfy {
+        max-width: 100% !important;
+        height: 80px !important;
+      }
+      .carousel {
+        max-width: 100% !important;
+      }
+      .loveandtime {
+        max-width: 100% !important;
+        font-size: 1rem !important;
+        padding: 0.8rem !important;
+      }
+      .msgmover {
+        font-size: 1.2rem !important;
+      }
+      .msgtexte {
+        font-size: 1rem !important;
+        padding: 1rem !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .titleSection {
+        font-size: 1.5rem !important;
+        margin-bottom: 1rem !important;
+      }
+      .Musicasportfy {
+        height: 60px !important; 
+      }
+      .loveandtime {
+        font-size: 0.9rem !important; 
+      }
+      .msgmover {
+        font-size: 1rem !important;
+      }
+      .msgtexte {
+        font-size: 1.2rem !important;
+        margin-bottom: 10em !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- 1. Título -->
+    <h2 class="titleSection">I am and my Love</h2>
+
+    <!-- 2. Música (Spotify Embed) -->
+    <iframe class="Musicasportfy"
+      src="https://open.spotify.com/embed/track/5xH45sa2UNt8K6s4PMqGT1?utm_source=generator&theme=0"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
+    </iframe>
+
+    <!-- 3. Carrossel de Imagens -->
+    <section class="carousel">
+      <img src="imgs/2.jpg" alt="Imagem romântica" id="cardimg">
+    </section>
+
+    <!-- 4. Contador de tempo desde 12/06/2024 -->
+    <div class="loveandtime">
+      <h4>Amanda, eu te amo há aproximadamente:</h4>
+      <div id="tempoPassado"></div>
+    </div>
+
+    <!-- 5. Mensagem em movimento -->
+    <marquee class="msgmover" behavior="alternate" scrollamount="5" direction="left">
+      <a href="Inamor.html" style="text-decoration: none; color: #ff70a6;">
+        Amanda, você é o meu inamor eterno 💖
+      </a>
+    </marquee>
+
+    <!-- 6. Texto Romântico -->
+    <div class="msgromantica">
+      <h3>Para Amanda, meu amor</h3>
+      <p class="msgtexte">
+        Amanda,...
+
+        Nem todas as palavras do mundo conseguiriam descrever o que você é pra mim — mas mesmo assim, aqui
+        estou, tentando.
+
+        Você é aquela luz que aparece mesmo quando o dia parece nublado. Um sorriso seu é o bastante para fazer
+        meu mundo parar. E que sorriso, meu amor… Ele é lindo de um jeito que nenhuma câmera captaria, porque
+        ele não é só imagem: é sentimento. É calor. É casa.
+
+        E as suas mordidas, tão suas… São brincadeiras que me marcam mais do que qualquer frase bonita. Porque
+        nelas mora carinho, atenção, amor — tudo misturado no jeito doce e só seu de me lembrar que eu sou teu.
+
+        Mas quando você está longe… é como se o tempo desacelerasse e meu peito ficasse vazio. Eu me perco de
+        mim mesmo. Parece que o mundo fica sem sentido, e eu só reencontro o meu caminho no brilho dos teus
+        olhos, no som da tua voz dizendo meu nome.
+
+        E foi por isso que eu criei aquela palavra, lembra? <strong>Inamor</strong>. Porque “amor” já não dava conta
+        de tudo o que sinto. Não era suficiente. Você me ensinou que o amor pode ser mais — e eu dei um nome
+        pra isso. Um nome só nosso.
+
+        Amanda, meu sentimento por você é eterno e além: é inamor.<br>
+        E eu te amo. Ontem, hoje, e por tudo que ainda há de vir.
+
+        <br><br>Com todo o meu ser,<br>João Daniel
+      </p>
+    </div>
+  </div>
+
+  <!-- 7. Script para carrossel e contador -->
+  <script src="Script.js"></script>
+</body>
+</html>

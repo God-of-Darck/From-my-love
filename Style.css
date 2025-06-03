@@ -1,0 +1,128 @@
+body {
+    background-color: black;
+}
+
+main {
+    color: white;
+}
+
+.titleSection {
+    text-align: center;
+}
+
+/*------------------------------------Musica--------------------------------------*/
+
+.Musicasportfy {
+    margin-left: 37% !important;
+}
+
+/*------------------------------carrosséo de imagens--------------------------------*/
+
+.carousel {
+    align-items: center !important;
+    width: 25% !important;
+    height: 650px !important;
+    margin-left: 37% !important;
+    border-radius: 16px !important;
+    margin-top: 20px !important;
+    border: solid 10px #ca215a;
+
+}
+
+.carousel:hover {
+    transform: scale(1.05) !important;
+}
+
+.card img {
+    width: 100% !important;
+    height: 630px !important;
+    border-radius: 19px !important;
+}
+
+/*------------------------------Love and Time--------------------------------*/
+
+.loveandtime {
+    background-color: rgb(209, 49, 156) !important;
+    text-align: center !important;
+    margin-top: 2em !important;
+    width: 35em !important;
+    margin-left: 33% !important;
+    border-radius: 16px !important;
+}
+
+/*-------------------------------Romantic texte--------------------------------*/
+
+.msgromantica {
+    margin-top: 4em !important;
+    text-align: center !important;
+}
+
+.msgtexte {
+    border-radius: 16px !important;
+    margin-left: 26% !important;
+    font-size: 24px !important;
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: #1a1a1a;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 112, 166, 0.3);
+
+}
+
+/*-----------------------------------responcividade--------------------------------------*/
+
+@media (min-width: 200px) and (max-width: 1024px) {
+
+    /*------------------------------------Musica--------------------------------------*/
+
+    .Musicasportfy {
+        margin-left: 0% !important;
+        width: 100% !important;
+        height: 80px !important;
+    }
+
+    /*------------------------------carrosséo de imagens--------------------------------*/
+
+    .carousel {
+        align-items: center !important;
+        width: 90% !important;
+        height: 750px !important;
+        margin-left: 5% !important;
+    }
+
+    .carousel:hover {
+        transform: scale(1.05) !important;
+    }
+
+    .card img {
+        height: 730px !important;
+    }
+
+    /*------------------------------Love and Time--------------------------------*/
+
+    .loveandtime {
+        width: 27em !important;
+        margin-left: 4% !important;
+        border-radius: 16px !important;
+        font-size: 14px !important;
+    }
+
+    .loveandtime h4{
+        font-size: 18px !important;
+    }
+
+    /* ----------------------------------msg movimente-------------------------------------- */
+
+    .msgmover {
+        font-size: 18px !important;
+    }
+
+    /*-------------------------------Romantic texte--------------------------------*/
+
+    .msgtexte {
+        margin-left: 2% !important;
+        font-size: 16px !important;
+        margin-bottom: 15em !important;
+    }
+}

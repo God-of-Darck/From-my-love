@@ -1,0 +1,60 @@
+
+
+// --------------------------Função das imagens do carossel-------------------------------
+
+// Lista com os nomes das imagens
+const imagens = [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg",
+  "4.jpg",
+  "5.jpg",
+  "6.jpg",
+  "7.jpg"
+];
+
+// Caminho onde as imagens estão salvas
+const caminho = "imgs/";
+
+// Função que troca a imagem aleatoriamente
+function trocarImagemAleatoriamente() {
+  const indexAleatorio = Math.floor(Math.random() * imagens.length);
+  const novaImagem = caminho + imagens[indexAleatorio];
+  document.getElementById("cardimg").src = novaImagem;
+}
+
+// Trocar imagem a cada 5 segundos (5.000 milissegundos)
+setInterval(trocarImagemAleatoriamente, 5000);
+
+// -------------------------Funçao do temporzador-------------------------
+
+function iniciarContador(dataTexto, idElemento) {
+  const partes = dataTexto.split("/");
+  const dataInicial = new Date(`${partes[2]}-${partes[1]}-${partes[0]}T00:00:00`);
+
+  function atualizar() {
+    const agora = new Date();
+    let diffMs = agora - dataInicial;
+
+    const segundosTotais = Math.floor(diffMs / 1000);
+    const segundos = segundosTotais % 60;
+    const minutosTotais = Math.floor(segundosTotais / 60);
+    const minutos = minutosTotais % 60;
+    const horasTotais = Math.floor(minutosTotais / 60);
+    const horas = horasTotais % 24;
+    const diasTotais = Math.floor(horasTotais / 24);
+
+    // Aproximar meses considerando 30.44 dias por mês (média)
+    const meses = Math.floor(diasTotais / 30.44);
+    const dias = Math.floor(diasTotais - (meses * 30.44));
+
+    const texto = `${meses} meses, ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos`;
+    document.getElementById(idElemento).textContent = texto;
+  }
+
+  atualizar();
+  setInterval(atualizar, 1000);
+}
+
+// Chamando a função com a data do início do namoro
+iniciarContador("12/06/2024", "tempoPassado");
