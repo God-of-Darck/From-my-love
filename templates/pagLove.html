@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,7 +39,7 @@
       font-size: 2.5rem !important;
       color: #ff70a6 !important;
       margin-bottom: 1.5rem !important;
-      text-shadow: 2px 2px 6px rgba(255, 112, 166, 0.6) !important; 
+      text-shadow: 2px 2px 6px rgba(255, 112, 166, 0.6) !important;
     }
 
     /* 5) Iframe do Spotify */
@@ -87,6 +88,7 @@
 
     /* 8) Mensagem deslizante */
     .msgmover {
+      font-family: Arial, Helvetica, sans-serif, cursive !important;
       font-size: 1.5rem !important;
       color: #ff70a6 !important;
       margin: 2rem auto !important;
@@ -94,6 +96,7 @@
 
     /* 9) Bloco de texto romântico */
     .msgromantica {
+      font-size: 1.5rem !important;
       margin: 3rem auto !important;
     }
 
@@ -103,10 +106,11 @@
       border-radius: 20px !important;
       box-shadow: 0 0 20px rgba(255, 112, 166, 0.3) !important;
       text-align: left !important;
-      font-size: 1.9rem !important;
+      font-size: 1rem !important;
       line-height: 1.6 !important;
       max-width: 800px !important;
       margin: 0 auto !important;
+      font-family: Arial, Helvetica, sans-serif, cursive !important;
     }
 
     /* 10) Media Queries para responsividade */
@@ -114,21 +118,26 @@
       .titleSection {
         font-size: 2rem !important;
       }
+
       .Musicasportfy {
         max-width: 100% !important;
         height: 90px !important;
       }
+
       .carousel {
         max-width: 100% !important;
       }
+
       .loveandtime {
         max-width: 100% !important;
         font-size: 1rem !important;
         padding: 0.8rem !important;
       }
+
       .msgmover {
         font-size: 1.2rem !important;
       }
+
       .msgtexte {
         font-size: 1rem !important;
         padding: 1rem !important;
@@ -140,15 +149,19 @@
         font-size: 1.5rem !important;
         margin-bottom: 1rem !important;
       }
+
       .Musicasportfy {
-        height: 70px !important; 
+        height: 70px !important;
       }
+
       .loveandtime {
-        font-size: 0.9rem !important; 
+        font-size: 0.9rem !important;
       }
+
       .msgmover {
-        font-size: 1,8rem !important;
+        font-size: 1, 8rem !important;
       }
+
       .msgtexte {
         font-size: 1.2rem !important;
         margin-bottom: 10em !important;
@@ -163,11 +176,18 @@
     <h2 class="titleSection">I am and my Love</h2>
 
     <!-- 2. Música (Spotify Embed) -->
-    <iframe class="Musicasportfy"
-      src="https://open.spotify.com/embed/track/5xH45sa2UNt8K6s4PMqGT1?utm_source=generator&theme=0"
+    <!-- <iframe class="Musicasportfy"
+      src="https://open.spotify.com/embed/track/5eeCipd1BK56hbiA161l54?utm_source=generator"
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
       loading="lazy">
-    </iframe>
+    </iframe> -->
+
+    <!-- 2. Musica(Audio.mp3) -->
+    <audio id="musicaFundo" autoplay>
+      <source src="/mp3/gatinha_comunista.mp3" type="audio/mpeg">
+      Seu navegador não suporta áudio.
+    </audio>
+
 
     <!-- 3. Carrossel de Imagens -->
     <section class="carousel">
@@ -222,4 +242,5 @@
   <!-- 7. Script para carrossel e contador -->
   <script src="/Script.js"></script>
 </body>
+
 </html>

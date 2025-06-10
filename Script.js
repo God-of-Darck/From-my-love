@@ -58,3 +58,26 @@ function iniciarContador(dataTexto, idElemento) {
 
 // Chamando a função com a data do início do namoro
 iniciarContador("12/06/2024", "tempoPassado");
+
+
+// --------------------------Toca a musica em loop-------------------------------
+
+
+window.addEventListener("DOMContentLoaded", () => {
+  const musica = document.getElementById("musicaFundo");
+
+  if (musica) {
+    musica.addEventListener("loadedmetadata", () => {
+      musica.currentTime = 39;
+      musica.play().catch(e => {
+        console.log("Autoplay bloqueado. Esperando interação do usuário.");
+      });
+    });
+
+    musica.addEventListener("timeupdate", () => {
+      if (musica.currentTime >= 66) {
+        musica.currentTime = 39;
+      }
+    });
+  }
+});
