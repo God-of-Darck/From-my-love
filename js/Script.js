@@ -14,7 +14,7 @@ const imagens = [
 ];
 
 // Caminho onde as imagens estão salvas
-const caminho = "/imgs/";
+const caminho = "imgs/";
 
 // Função que troca a imagem aleatoriamente
 function trocarImagemAleatoriamente() {
