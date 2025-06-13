@@ -1,5 +1,3 @@
-
-
 // --------------------------Função das imagens do carossel-------------------------------
 
 // Lista com os nomes das imagens
@@ -44,11 +42,12 @@ function iniciarContador(dataTexto, idElemento) {
     const horas = horasTotais % 24;
     const diasTotais = Math.floor(horasTotais / 24);
 
-    // Aproximar meses considerando 30.44 dias por mês (média)
-    const meses = Math.floor(diasTotais / 30.44);
-    const dias = Math.floor(diasTotais - (meses * 30.44));
+    // Aproximar meses considerando 30.4 dias por mês (média)
+    const ano = Math.floor(diasTotais / (12 * 30.4));
+    const meses = Math.floor(diasTotais - (12 * 30.4));
+    const dias = Math.floor(diasTotais / (diasTotais / meses));
 
-    const texto = `${meses} meses, ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos`;
+    const texto = `${ano} ano, ${meses} meses, ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos`;
     document.getElementById(idElemento).textContent = texto;
   }
 
@@ -146,4 +145,4 @@ window.addEventListener("DOMContentLoaded", () => {
 // ++++++++++++++++++++++++++++++++++++++++++**+++*++**##+#*+*++++%++++++++++++++++++++++++++++++++++++++++++
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
